@@ -1,0 +1,8 @@
+[Unit]
+Description=Plays a beep sound
+
+[Service]
+ExecStart=/usr/bin/startupbeep.sh
+
+[Install]
+WantedBy=multi-user.target
