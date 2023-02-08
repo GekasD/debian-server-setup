@@ -1,3 +1,4 @@
 network-manager
 beep
 neofetch
+sudo
