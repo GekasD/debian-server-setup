@@ -29,7 +29,7 @@ cat ./beeps/mario-victory.sh > /usr/bin/startupbeep.sh
 # Installing packages from packages.txt using xargs
 xargs sudo apt install <packages.txt
 
-# Enable the startup beep script
+# Enable the startup beep script on boot
 systemctl enable startupbeep.service
 ```
 
