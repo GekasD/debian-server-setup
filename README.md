@@ -6,6 +6,7 @@ A basic overview of the setup I use to make managing my headless server a bit ea
 - A systemd service that makes the motherboard speaker beep when the OS loads (by calling a script file)
 
 ## Installation example
+You can switch to the root user (using `sudo su`), if you don't want to type sudo for most of these
 ```sh
 # Download the files from this repo
 git clone https://github.com/GekasD/debian-server-setup.git
@@ -17,14 +18,14 @@ cd debian-server-setup
 git clone https://github.com/ShaneMcC/beeps.git
 
 # Copy systemd service file to it's correct directory
-cp ./services/startupbeep.service /lib/systemd/system/
+sudo cp ./services/startupbeep.service /lib/systemd/system/
 
 # Create an empty sh file on /usr/bin called startupbeep.sh, and make it executable
-touch /usr/bin/startupbeep.sh
-chmod +x /usr/bin/startupbeep.sh
+sudo touch /usr/bin/startupbeep.sh
+sudo chmod +x /usr/bin/startupbeep.sh
 
 # Append the content of a beep script inside startupbeep.sh using cat, for example:
-cat ./beeps/mario-victory.sh > /usr/bin/startupbeep.sh
+sudo cat ./beeps/mario-victory.sh > /usr/bin/startupbeep.sh
 
 # Installing packages from packages.txt using xargs
 xargs sudo apt install <packages.txt
