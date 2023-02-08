@@ -16,14 +16,14 @@ cd debian-server-setup
 # Downloading a bunch of beep songs inside our directory
 git clone https://github.com/ShaneMcC/beeps.git
 
-# Copy systemd file to it's correct directory
-cp ./lib/systemd/system/startupbeep.service /lib/systemd/system/
+# Copy systemd service file to it's correct directory
+cp ./services/startupbeep.service /lib/systemd/system/
 
 # Create an empty sh file on /usr/bin called startupbeep.sh, and make it executable
 touch /usr/bin/startupbeep.sh
 chmod +x /usr/bin/startupbeep.sh
 
-# Append the content of a beep script inside startupbeep.sh, using cat
+# Append the content of a beep script inside startupbeep.sh using cat, for example:
 cat ./beeps/mario-victory.sh > /usr/bin/startupbeep.sh
 
 # Installing packages from packages.txt using xargs
