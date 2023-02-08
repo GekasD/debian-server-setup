@@ -1,4 +1,7 @@
 network-manager
+sudo
+screen
+htop
+neovim
 beep
 neofetch
-sudo
