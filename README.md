@@ -3,7 +3,7 @@
 ## What is this?
 A basic overview of the setup I use to make managing my headless server a bit easier and more fun, currently this includes:
 - A packages.txt file containing the names of all the packages I use
-- A script/service that makes the motherboard speaker beep when the OS loads
+- A systemd service that makes the motherboard speaker beep when the OS loads (by calling a script file)
 
 ## Installation example
 ```sh
@@ -33,7 +33,7 @@ xargs sudo apt install <packages.txt
 systemctl enable startupbeep.service
 ```
 
-You will now hear crazy the mario victory theme every time your computer boots up, that's crazy!
+You will now hear the mario victory theme every time your computer boots up, that's crazy!
 
 # Credits
 - [ShaneMcC]: Made a repository containing many beep song scripts, visit it [here](https://github.com/ShaneMcC/beeps)
