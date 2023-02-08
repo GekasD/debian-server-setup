@@ -5,15 +5,23 @@ A basic overview of the setup I use to make managing my headless server a bit ea
 - A packages.txt file containing the names of all the packages I use
 - A script/service that makes the motherboard speaker beep when the OS loads
 
-## Installation
+## Installation example
 ```sh
-# Download the files from this repo and put them in their correct directories
+# Download the files from this repo
+git clone https://github.com/GekasD/debian-server-setup.git
 
-# Installing packages from packages.txt using xargs
-xargs sudo apt install <packages.txt
+# Move to the repo folder
+cd debian-server-setup
+
+# Copy files to their correct directories
+cp ./lib/systemd/system/startupbeep.service /lib/systemd/system/
+cp ./usr/bin/startupbeep.sh /usr/bin/startupbeep.sh
 
 # Make sure startupbeep.sh is executable
 chmod +x /usr/bin/startupbeep.sh
+
+# Installing packages from packages.txt using xargs
+xargs sudo apt install <packages.txt
 
 # Enable the startup beep script
 systemctl enable startupbeep.service
