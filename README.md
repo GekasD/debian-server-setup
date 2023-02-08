@@ -33,7 +33,7 @@ xargs sudo apt install <packages.txt
 systemctl enable startupbeep.service
 ```
 
-You will now hear crazy frog every time your computer boots up, that's crazy!
+You will now hear crazy the mario victory theme every time your computer boots up, that's crazy!
 
 # Credits
 - [ShaneMcC]: Made a repository containing many beep song scripts, visit it [here](https://github.com/ShaneMcC/beeps)
